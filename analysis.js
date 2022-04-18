@@ -44,20 +44,20 @@ function FunctionBuilder()
 	this.report = function()
 	{
 		console.log(
-		   (
-		   	"{0}(): {1}\n" +
-		   	"============\n" +
-			   "SimpleCyclomaticComplexity: {2}\t" +
+			(
+			"{0}(): {1}\n" +
+			"============\n" +
+				"SimpleCyclomaticComplexity: {2}\t" +
 				"MaxNestingDepth: {3}\t" +
 				"MaxConditions: {4}\t" +
 				"Parameters: {5}\n\n"
 			)
 			.format(this.FunctionName, this.StartLine,
-				     this.SimpleCyclomaticComplexity, this.MaxNestingDepth,
-			        this.MaxConditions, this.ParameterCount)
+					this.SimpleCyclomaticComplexity, this.MaxNestingDepth,
+					this.MaxConditions, this.ParameterCount)
 		);
 	}
-};
+}
 
 // A builder for storing file level information.
 function FileBuilder()
@@ -92,8 +92,8 @@ function traverseWithParents(object, visitor)
             child = object[key];
             if (typeof child === 'object' && child !== null && key != 'parent') 
             {
-            	child.parent = object;
-					traverseWithParents(child, visitor);
+				child.parent = object;
+				traverseWithParents(child, visitor);
             }
         }
     }
@@ -188,7 +188,7 @@ function childrenLength(node)
 function isDecision(node)
 {
 	if( node.type == 'IfStatement' || node.type == 'ForStatement' || node.type == 'WhileStatement' ||
-		 node.type == 'ForInStatement' || node.type == 'DoWhileStatement')
+		node.type == 'ForInStatement' || node.type == 'DoWhileStatement')
 	{
 		return true;
 	}
@@ -277,34 +277,34 @@ remainder.toString() + " seconds";
           {
               szhr = "hour";
               for ( i = 0 ; i < cfield.value.length ; i++)
-				  {
-				    var n = cfield.value.substr(i,1);
-				    if ( n != 'a' && n != 'b' && n != 'c' && n != 'd'
-				      && n != 'e' && n != 'f' && n != 'g' && n != 'h'
-				      && n != 'i' && n != 'j' && n != 'k' && n != 'l'
-				      && n != 'm' && n != 'n' && n != 'o' && n != 'p'
-				      && n != 'q' && n != 'r' && n != 's' && n != 't'
-				      && n != 'u' && n != 'v' && n != 'w' && n != 'x'
-				      && n != 'y' && n != 'z'
-				      && n != 'A' && n != 'B' && n != 'C' && n != 'D'
-				      && n != 'E' && n != 'F' && n != 'G' && n != 'H'
-				      && n != 'I' && n != 'J' && n != 'K' && n != 'L'
-				      && n != 'M' && n != 'N' &&  n != 'O' && n != 'P'
-				      && n != 'Q' && n != 'R' && n != 'S' && n != 'T'
-				      && n != 'U' && n != 'V' && n != 'W' && n != 'X'
-				      && n != 'Y' && n != 'Z'
-				      && n != '0' && n != '1' && n != '2' && n != '3'
-				      && n != '4' && n != '5' && n != '6' && n != '7'
-				      && n != '8' && n != '9'
-				      && n != '_' && n != '@' && n != '-' && n != '.' )
-				    {
-				      window.alert("Only Alphanumeric are allowed.\nPlease re-enter the value.");
-				      cfield.value = '⠀';
-				      cfield.focus();
-				    }
-				    cfield.value =  cfield.value.toUpperCase();
-				  }
-				  return;
+					{
+					var n = cfield.value.substr(i,1);
+					if ( n != 'a' && n != 'b' && n != 'c' && n != 'd'
+						&& n != 'e' && n != 'f' && n != 'g' && n != 'h'
+						&& n != 'i' && n != 'j' && n != 'k' && n != 'l'
+						&& n != 'm' && n != 'n' && n != 'o' && n != 'p'
+						&& n != 'q' && n != 'r' && n != 's' && n != 't'
+						&& n != 'u' && n != 'v' && n != 'w' && n != 'x'
+						&& n != 'y' && n != 'z'
+						&& n != 'A' && n != 'B' && n != 'C' && n != 'D'
+						&& n != 'E' && n != 'F' && n != 'G' && n != 'H'
+						&& n != 'I' && n != 'J' && n != 'K' && n != 'L'
+						&& n != 'M' && n != 'N' &&  n != 'O' && n != 'P'
+						&& n != 'Q' && n != 'R' && n != 'S' && n != 'T'
+						&& n != 'U' && n != 'V' && n != 'W' && n != 'X'
+						&& n != 'Y' && n != 'Z'
+						&& n != '0' && n != '1' && n != '2' && n != '3'
+						&& n != '4' && n != '5' && n != '6' && n != '7'
+						&& n != '8' && n != '9'
+						&& n != '_' && n != '@' && n != '-' && n != '.' )
+					{
+						window.alert("Only Alphanumeric are allowed.\nPlease re-enter the value.");
+						cfield.value = '⠀';
+						cfield.focus();
+					}
+					cfield.value =  cfield.value.toUpperCase();
+				}
+				return;
           }
           return hours.toString().split(".")[0] + " " + szhr + " " +
 mints.toString().split(".")[0] + " " + szmin;
