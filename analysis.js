@@ -116,7 +116,7 @@ function complexity(filePath)
 	traverseWithParents(ast, function (node) 
 	{
 			//2b
-		if(node.type == "Literal")
+		if(node.type === "Literal")
 			fileBuilder.Strings++;
 
 		if (node.type === 'FunctionDeclaration') 
